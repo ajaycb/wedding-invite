@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"> 
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=500" />
+
+	<link rel="stylesheet" href="../css/normalize.css" type="text/css">
+	<link rel="stylesheet" href="../css/style.css" type="text/css">
+	<link rel="stylesheet" href="foo.css" type="text/css">
+
+	<script type="text/javascript" src="../js/_dependent/greensock/TweenMax.min.js"></script>
+	<script type="text/javascript" src="../js/_dependent/jquery-1.11.0.min.js"></script>
+  	<script type="text/javascript" src="../js/_examples/modernizr.custom.min.js"></script>
+  	<script type="text/javascript" src="../js/jquery.scrollmagic.js"></script>
+  	<script type="text/javascript" src="../js/jquery.scrollmagic.debug.js"></script>
+  <script>
+$(function() {
+  var controller = new ScrollMagic();
+    var tween_road = TweenMax.to("#road", 60, {backgroundPosition: "-450px 0px", repeat:10, ease: Linear.easeNone  });
+    var tween_mountains = TweenMax.to("#mountains", 30, {backgroundPosition: "-2255px 0px", ease: Linear.easeNone  });
+    var tween_trees = TweenMax.to("#trees", 20, {backgroundPosition: "-2255px 0px", repeat:2, ease: Linear.easeNone  });
+    var tween_auto = TweenMax.to("#rick", 2, {left: "250px", ease: Linear.easeNone  });
+    var tween_auto = TweenMax.to("#rick", 1, {top: "+=5px", repeat:-1, yoyo:true, ease: Linear.easeNone  });
+   
+    // build scene
+    var scene = new ScrollScene({triggerElement: "#trigger1", triggerHook:"onLeave", duration: 24000})
+            .setTween(tween_road)
+            .setPin("#setting",{pushFollowers: false})
+            .addTo(controller);
+
+    var scene1 = new ScrollScene({triggerElement: "#trigger1", triggerHook:"onLeave", duration: 24000})
+            .setTween(tween_trees)
+            .addTo(controller);
+
+
+    var scene1 = new ScrollScene({triggerElement: "#trigger1", triggerHook:"onLeave", duration: 24000})
+            .setTween(tween_mountains)
+            .addTo(controller);
+
+    scene.addIndicators();
+  });
+  </script>
+</head>
+<body>
+    <div id="trigger1" class="spacer s0">    
+      <div id="message" style="position:absolute; width:100%; margin: auto 0">
+        <h1>First Meeting</h1> <h2>Arbour Brewery, Bangalore</h2> Friends. Beer. Good times
+      </div>
+    </div>
+    <div id="setting" style="position:relative; width:100%; height:100%; top:0px ">
+    <div id="mountains" >
+    </div>
+    <div id="trees">
+    </div>
+    <div id="road" style="">
+    </div>
+    <div id="rick" style="">
+    </div>
+    </div>
+    <div id="trigger3" class="spacer" style="min-height:23950px">Trigger happy</div>
+</body>
+</html>

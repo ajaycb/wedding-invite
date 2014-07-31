@@ -1,0 +1,111 @@
+#mountains {
+  position : absolute;
+  width:100%; height:300px; bottom:250px; z-index:-9; 
+  background: url('assets/mountain_small_brown.png');
+  background-size: 2100px;
+}
+#trees
+{
+  position : absolute;
+  width:100%; height:350px; bottom:160px; z-index:-9; background: url('assets/trees_small.png');
+  background-size: 2000px;
+}
+#road {
+	position:absolute; width:100%; height:290px; bottom:20px; 
+	background: url('assets/road1.png?3'); 
+	z-index:-10 
+}
+#rick {
+	position:absolute; width:350px; height:260px; bottom:73px; 
+	background: url('assets/rickshaw.png'); 
+	background-size: 350px;
+	z-index:10 
+}
+
+body {
+ background: url('assets/gradient1.png')
+}
+.spacer {
+	text-align: center;
+	min-height: 100px;
+}
+.spacer.s0 {
+	min-height: 1px;
+}
+.spacer.s1 {
+	min-height: 100px;
+}
+.spacer.s2 {
+	min-height: 200px;
+}
+.spacer.s3 {
+	min-height: 300px;
+}
+.spacer.s4 {
+	min-height: 400px;
+}
+.spacer.s5 {
+	min-height: 500px;
+}
+.spacer.s6 {
+	min-height: 600px;
+}
+.spacer.s7 {
+	min-height: 700px;
+}
+.spacer.s8 {
+	min-height: 800px;
+}
+.spacer.s9 {
+	min-height: 900px;
+}
+.spacer.s10 {
+	min-height: 1000px;
+}
+.spacer.s_viewport {
+	min-height: 100%;
+}
+.horizontal .spacer {
+	margin-bottom: 0;
+	min-height: initial;
+	min-width: 100px;
+	height: 100%;
+	display: inline-block;
+	vertical-align: top;
+}
+.horizontal .spacer.s0 {
+	min-width: 1px;
+}
+.horizontal .spacer.s1 {
+	min-width: 100px;
+}
+.horizontal .spacer.s2 {
+	min-width: 200px;
+}
+.horizontal .spacer.s3 {
+	min-width: 300px;
+}
+.horizontal .spacer.s4 {
+	min-width: 400px;
+}
+.horizontal .spacer.s5 {
+	min-width: 500px;
+}
+.horizontal .spacer.s6 {
+	min-width: 600px;
+}
+.horizontal .spacer.s7 {
+	min-width: 700px;
+}
+.horizontal .spacer.s8 {
+	min-width: 800px;
+}
+.horizontal .spacer.s9 {
+	min-width: 900px;
+}
+.horizontal .spacer.s10 {
+	min-width: 1000px;
+}
+.spacer.s_viewport {
+	min-width: 100%;
+}
