@@ -4,6 +4,39 @@
   background: url('assets/mountain_small_brown.png');
   background-size: 2100px;
 }
+#fb1, #fb2 {
+  width: 300px;
+  height:150px;
+  font-family: 'Bubblegum Sans', cursive;
+  font-size: 28px;
+  color: #6f0202;
+  background: url('assets/flying_banner.png') no-repeat;
+  background-size: 270px;
+  position: absolute;
+  right: -300px;
+  top: 150px;
+}
+#fb2 {
+	right: -900px;
+	top: 100px;
+}
+.banner {
+	width: 750px;
+	height: 80px;
+	top: 30px;
+	position: relative;
+	padding: 15px 0px 0px 25px;
+	border: 1px dashed #ff3af8;
+	left: 251px;
+	color: #fff;
+	background: #48005f;
+	text-align: center;
+	z-index: 10;
+}
+#fb2 .banner{
+	color: #6a0000;
+	background: #ce8300 ;
+}
 #trees
 {
   position : absolute;
@@ -108,4 +141,57 @@ body {
 }
 .spacer.s_viewport {
 	min-width: 100%;
+}
+
+
+/*
+	General styles
+*/
+body {
+	font-family: 'Bubblegum Sans', cursive, "Source Sans Pro", Arial, sans-serif;
+	font-size: 13px;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+body, html {
+	height: 100%
+}
+
+h1 {
+	font-style: italic;
+	font-weight: bold;
+	font-size: 40px;
+}
+h2 {
+	font-size: 20px;
+}
+h4 {
+	font-size: 32px;
+	margin: 0px;
+}
+a, a:visited {
+	text-decoration: none;
+	color: #2e639e;
+}
+a:hover {
+	text-decoration: underline;
+}
+.touchonly {
+	display: none;
+}
+html.touch .touchonly {
+	display: block;
+}
+.noselect * {
+	user-select: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+}
+.doselect * {
+	user-select: auto;
+	-webkit-user-select: auto;
+	-khtml-user-select: auto;
+	-moz-user-select: auto;
+	-o-user-select: auto;	
 }

@@ -8,7 +8,7 @@
 	<link rel="stylesheet" href="css/normalize.css" type="text/css">
 	<link rel="stylesheet" href="css/style.css" type="text/css">
 	<link rel="stylesheet" href="foo.css" type="text/css">
-
+  <link href='http://fonts.googleapis.com/css?family=Bubblegum+Sans' rel='stylesheet' type='text/css'>
 	<script type="text/javascript" src="js/_dependent/greensock/TweenMax.min.js"></script>
 	<script type="text/javascript" src="js/_dependent/jquery-1.11.0.min.js"></script>
   	<script type="text/javascript" src="js/_examples/modernizr.custom.min.js"></script>
@@ -22,7 +22,8 @@ $(function() {
     var tween_trees = TweenMax.to("#trees", 20, {backgroundPosition: "-2255px 0px", repeat:2, ease: Linear.easeNone  });
     var tween_auto = TweenMax.to("#rick", 2, {left: "250px", ease: Linear.easeNone  });
     var tween_auto = TweenMax.to("#rick", 1, {top: "+=5px", repeat:-1, yoyo:true, ease: Linear.easeNone  });
-   
+    var tween_fb1 = TweenMax.to("#fb1", 3, {left: "-1300px", top:"-100px", ease: Linear.easeNone});
+    var tween_fb2 = TweenMax.to("#fb2", 3, {left: "-1300px", top:"0px", ease: Linear.easeNone});
     // build scene
     var scene = new ScrollScene({triggerElement: "#trigger1", triggerHook:"onLeave", duration: 24000})
             .setTween(tween_road)
@@ -38,26 +39,45 @@ $(function() {
             .setTween(tween_mountains)
             .addTo(controller);
 
+    var scene1 = new ScrollScene({triggerElement: "#trigger1", triggerHook:"onLeave", duration: 2400})
+            .setTween(tween_fb1)
+            .addTo(controller);
+
+    var scene2 = new ScrollScene({triggerElement: "#trigger3", triggerHook:"onLeave", duration: 2400})
+            .setTween(tween_fb2)
+            .addTo(controller);
+
     scene.addIndicators();
   });
   </script>
 </head>
 <body>
     <div id="trigger1" class="spacer s0">    
-      <div id="message" style="position:absolute; width:100%; margin: auto 0">
-        <h1>First Meeting</h1> <h2>Arbour Brewery, Bangalore</h2> Friends. Beer. Good times
+    </div>
+
+    <div id="setting" style="position:relative; width:100%; height:100%; top:0px ">
+      <div id="fb1">
+        <div class="banner">
+          <h4>An Unexpected Journey</h4>Arbour Brewery ...Burrrp....   Friends. Fun .Chitter. Chatter.....Burrrrp
+        </div>
+      </div>
+
+      <div id="fb2">
+        <div class="banner">
+          First Meeting ..Arbour Brewery, Bangalore Friends. Beer. Good times
+        </div>
+      </div>
+
+      <div id="mountains" >
+      </div>
+      <div id="trees">
+      </div>
+      <div id="road" style="">
+      </div>
+      <div id="rick" style="">
       </div>
     </div>
-    <div id="setting" style="position:relative; width:100%; height:100%; top:0px ">
-    <div id="mountains" >
-    </div>
-    <div id="trees">
-    </div>
-    <div id="road" style="">
-    </div>
-    <div id="rick" style="">
-    </div>
-    </div>
+    <div id="trigger2" class="spacer" style="min-height:3600px">Trigger happy</div>
     <div id="trigger3" class="spacer" style="min-height:23950px">Trigger happy</div>
 </body>
 </html>
