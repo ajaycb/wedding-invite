@@ -54,7 +54,22 @@
 	background-size: 350px;
 	z-index:10 
 }
-
+#aj_head{
+	position: absolute;
+	background: url('assets/ajay_head.png'); 
+	width: 68px;
+	height: 90px;
+	left:180px;
+	top:-10px;
+}
+#swa_head {
+	position: absolute;	
+	background: url('assets/swa_head.png'); 
+	width: 85px;
+	height: 145px;
+	top: 0px;
+	left: 80px;
+}
 body {
  background: url('assets/gradient1.png')
 }

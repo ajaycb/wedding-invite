@@ -17,6 +17,8 @@
   <script>
 $(function() {
   var controller = new ScrollMagic();
+    TweenMax.fromTo("#aj_head", 1, {rotation: -10}, {rotation: 10, yoyo:true, repeat:-1, ease: Linear.easeNone  });
+    TweenMax.fromTo("#swa_head", 1, {rotation: 10}, {rotation: -10, yoyo:true, repeat:-1, ease: Linear.easeNone  });
     var tween_road = TweenMax.to("#road", 60, {backgroundPosition: "-450px 0px", repeat:10, ease: Linear.easeNone  });
     var tween_mountains = TweenMax.to("#mountains", 30, {backgroundPosition: "-2255px 0px", ease: Linear.easeNone  });
     var tween_trees = TweenMax.to("#trees", 20, {backgroundPosition: "-2255px 0px", repeat:2, ease: Linear.easeNone  });
@@ -75,6 +77,9 @@ $(function() {
       <div id="road" style="">
       </div>
       <div id="rick" style="">
+        <div id="aj_head" class="head"></div>
+        <div id="swa_head" class="head"></div>
+        
       </div>
     </div>
     <div id="trigger2" class="spacer" style="min-height:3600px">Trigger happy</div>
