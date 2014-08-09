@@ -9,80 +9,134 @@
 	<link rel="stylesheet" href="css/style.css" type="text/css">
 	<link rel="stylesheet" href="foo.css" type="text/css">
   <link href='http://fonts.googleapis.com/css?family=Bubblegum+Sans' rel='stylesheet' type='text/css'>
-	<script type="text/javascript" src="js/_dependent/greensock/TweenMax.min.js"></script>
-	<script type="text/javascript" src="js/_dependent/jquery-1.11.0.min.js"></script>
-  	<script type="text/javascript" src="js/_examples/modernizr.custom.min.js"></script>
-  	<script type="text/javascript" src="js/jquery.scrollmagic.js"></script>
-  	<script type="text/javascript" src="js/jquery.scrollmagic.debug.js"></script>
+  <script type="text/javascript" src="js/_dependent/greensock/TweenMax.min.js"></script>
+  <script type="text/javascript" src="js/_dependent/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="js/_examples/modernizr.custom.min.js"></script>
+  <script type="text/javascript" src="js/jquery.scrollmagic.js"></script>
+  <script type="text/javascript" src="js/jquery.scrollmagic.debug.js"></script>
   <script>
-$(function() {
-  var controller = new ScrollMagic();
-    TweenMax.fromTo("#aj_head", 1, {rotation: -10}, {rotation: 10, yoyo:true, repeat:-1, ease: Linear.easeNone  });
-    TweenMax.fromTo("#swa_head", 1, {rotation: 10}, {rotation: -10, yoyo:true, repeat:-1, ease: Linear.easeNone  });
-    var tween_road = TweenMax.to("#road", 60, {backgroundPosition: "-450px 0px", repeat:10, ease: Linear.easeNone  });
-    var tween_mountains = TweenMax.to("#mountains", 30, {backgroundPosition: "-2255px 0px", ease: Linear.easeNone  });
-    var tween_trees = TweenMax.to("#trees", 20, {backgroundPosition: "-2255px 0px", repeat:2, ease: Linear.easeNone  });
-    var tween_auto = TweenMax.to("#rick", 2, {left: "250px", ease: Linear.easeNone  });
-    var tween_auto = TweenMax.to("#rick", 1, {top: "+=5px", repeat:-1, yoyo:true, ease: Linear.easeNone  });
-    var tween_fb1 = TweenMax.to("#fb1", 3, {left: "-1300px", top:"-100px", ease: Linear.easeNone});
-    var tween_fb2 = TweenMax.to("#fb2", 3, {left: "-1300px", top:"0px", ease: Linear.easeNone});
+    $(function() {
+      var controller = new ScrollMagic();
+      var c1=TweenMax.to("#setting",10, {backgroundColor:'#090017'});
+      //var c2=TweenMax.fromTo("#clouds",5,{opacity:".50"},{opacity:"0",yoyo:true,repeat:-1, ease: Linear.easeNone});
+      //TweenMax.to("#clouds",15,{backgroundPosition:'-1200px 0px',repeat:-1, ease: Linear.easeNone});
+      TweenMax.fromTo("#aj_head", 1, {rotation: -10}, {rotation: 10, yoyo:true, repeat:-1, ease: Linear.easeNone  });
+      TweenMax.fromTo("#swa_head", 1, {rotation: 10}, {rotation: -10, yoyo:true, repeat:-1, ease: Linear.easeNone  });
+      var tween_road = TweenMax.to("#road", 60, {backgroundPosition: "-450px 0px", repeat:10, ease: Linear.easeNone  });
+      var tween_mountains = TweenMax.to("#mountains", 30, {backgroundPosition: "-2255px 0px", ease: Linear.easeNone  });
+      var tween_trees = TweenMax.to("#trees", 20, {backgroundPosition: "-2255px 0px", repeat:2, ease: Linear.easeNone  });
+      var tween_auto = TweenMax.to("#rick", 2, {left: "175px", ease: Linear.easeNone  });
+      var tween_auto = TweenMax.to("#rick", 1, {top: "+=5px", repeat:-1, yoyo:true, ease: Linear.easeNone  });
+      var tween_fb1 = TweenMax.to("#fb1", 3, {left: "-1300px", top:"-100px", ease: Linear.easeNone});
+      var tween_fb2 = TweenMax.to("#fb2", 3, {left: "-1300px", top:"0px", ease: Linear.easeNone});
+      var tween_fb3 = TweenMax.to("#fb3", 3, {left: "-1300px", top:"0px", ease: Linear.easeNone});
+      var tween_fb4 = TweenMax.to("#fb4", 3, {left: "-1300px", top:"0px", ease: Linear.easeNone});
+      var tween_bb29 = TweenMax.to("#bb", 10, {left: "-1700px", ease: Linear.easeNone});
     // build scene
-    var scene = new ScrollScene({triggerElement: "#trigger1", triggerHook:"onLeave", duration: 24000})
-            .setTween(tween_road)
-            .setPin("#setting",{pushFollowers: false})
-            .addTo(controller);
+    var total_height = 14000;
+    var scene = new ScrollScene({triggerElement: "#trigger1", triggerHook:"onLeave", duration: total_height})
+    .setTween(tween_road)
+    .setPin("#setting",{pushFollowers: false})
+    .addTo(controller);
 
-    var scene1 = new ScrollScene({triggerElement: "#trigger1", triggerHook:"onLeave", duration: 24000})
-            .setTween(tween_trees)
-            .addTo(controller);
+    var scene1 = new ScrollScene({triggerElement: "#trigger1", triggerHook:"onLeave", duration: total_height})
+    .setTween(tween_trees)
+    .addTo(controller);
+
+    var scene1 = new ScrollScene({triggerElement: "#trigger1", triggerHook:"onLeave", duration: total_height})
+    .setTween(c1)
+    .addTo(controller);
+
+    //var scene1 = new ScrollScene({triggerElement: "#trigger1", triggerHook:"onLeave", duration: total_height})
+    //.setTween(c2)
+    //.addTo(controller);
 
 
-    var scene1 = new ScrollScene({triggerElement: "#trigger1", triggerHook:"onLeave", duration: 24000})
-            .setTween(tween_mountains)
-            .addTo(controller);
+    var scene1 = new ScrollScene({triggerElement: "#trigger1", triggerHook:"onLeave", duration: total_height})
+    .setTween(tween_mountains)
+    .addTo(controller);
 
     var scene1 = new ScrollScene({triggerElement: "#trigger1", triggerHook:"onLeave", duration: 2400})
-            .setTween(tween_fb1)
-            .addTo(controller);
+    .setTween(tween_fb1)
+    .addTo(controller);
 
     var scene2 = new ScrollScene({triggerElement: "#trigger3", triggerHook:"onLeave", duration: 2400})
-            .setTween(tween_fb2)
-            .addTo(controller);
+    .setTween(tween_fb2)
+    .addTo(controller);
+
+    var scene2 = new ScrollScene({triggerElement: "#trigger4", triggerHook:"onLeave", duration: 2400})
+    .setTween(tween_fb3)
+    .addTo(controller);
+
+    var scene2 = new ScrollScene({triggerElement: "#trigger5", triggerHook:"onLeave", duration: 2400})
+    .setTween(tween_fb4)
+    .addTo(controller);
+
+    var scene2 = new ScrollScene({triggerElement: "#trigger6", triggerHook:"onLeave", duration: 2400})
+    .setTween(tween_bb29)
+    .addTo(controller);
 
     scene.addIndicators();
   });
-  </script>
+</script>
 </head>
 <body>
-    <div id="trigger1" class="spacer s0">    
+  <div id="trigger1" class="spacer s0">    
+  </div>
+
+  <div id="setting" style="position:relative; width:100%; height:100%; top:0px ">
+    <div id="fb1">
+      <div class="banner">
+        <h4>An Unexpected Journey</h4>
+        Arbour Brewery ...Burrrp....   Friends. Fun .Chitter. Chatter.....Burrrrp
+      </div>
     </div>
 
-    <div id="setting" style="position:relative; width:100%; height:100%; top:0px ">
-      <div id="fb1">
-        <div class="banner">
-          <h4>An Unexpected Journey</h4>Arbour Brewery ...Burrrp....   Friends. Fun .Chitter. Chatter.....Burrrrp
-        </div>
-      </div>
-
-      <div id="fb2">
-        <div class="banner">
-          First Meeting ..Arbour Brewery, Bangalore Friends. Beer. Good times
-        </div>
-      </div>
-
-      <div id="mountains" >
-      </div>
-      <div id="trees">
-      </div>
-      <div id="road" style="">
-      </div>
-      <div id="rick" style="">
-        <div id="aj_head" class="head"></div>
-        <div id="swa_head" class="head"></div>
+    <div id="fb2">
+      <div class="banner">
+        <h4>Improbability Drive</h4>
         
       </div>
     </div>
-    <div id="trigger2" class="spacer" style="min-height:3600px">Trigger happy</div>
-    <div id="trigger3" class="spacer" style="min-height:23950px">Trigger happy</div>
+
+    <div id="fb3">
+      <div class="banner">
+        <h4>Dance of the Fireflies</h4>
+      </div>
+    </div>
+
+    <div id="fb4">
+      <div class="banner">
+        <h4>Tigers Nest</h4>
+      </div>
+    </div>
+
+    <div id="bb">
+      <div id="bb29">
+      </div>
+      <div id="bb30">
+      </div>
+    </div>
+
+    <div id="clouds_hmm" >
+    </div>
+    <div id="mountains" >
+    </div>
+    <div id="trees">
+    </div>
+    <div id="road" style="">
+    </div>
+    <div id="rick" style="">
+      <div id="aj_head" class="head"></div>
+      <div id="swa_head" class="head"></div>
+
+    </div>
+  </div>
+  <div id="trigger2" class="spacer" style="min-height:3600px">Scene 1 Act 1</div>
+  <div id="trigger3" class="spacer" style="min-height:2400px">Scene 1 Act 2</div>
+  <div id="trigger4" class="spacer" style="min-height:2400px">Scene 1 Act 3</div>
+  <div id="trigger5" class="spacer" style="min-height:2400px">Scene 1 Act 4</div>
+  <div id="trigger6" class="spacer" style="min-height:2000px">Scene 2 Act 1</div>
+  <div id="trigger_last" class="spacer" style="min-height:1000px">Scene 2 Act 2</div>
 </body>
 </html>

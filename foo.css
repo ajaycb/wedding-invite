@@ -1,10 +1,20 @@
+#setting {
+	overflow: hidden;
+	background: url('assets/sky.png') no-repeat;
+}
+#clouds {
+  position : absolute;
+  width:100%; height:400px; top:0px;
+  background: url("assets/clouds.png") repeat-x;
+  z-index:-1;
+}
 #mountains {
   position : absolute;
-  width:100%; height:300px; bottom:250px; z-index:-9; 
+  width:100%; height:300px; bottom:230px; z-index:1; 
   background: url('assets/mountain_small_brown.png');
   background-size: 2100px;
 }
-#fb1, #fb2 {
+#fb1, #fb2 , #fb3, #fb4{
   width: 300px;
   height:150px;
   font-family: 'Bubblegum Sans', cursive;
@@ -13,6 +23,10 @@
   background: url('assets/flying_banner.png') no-repeat;
   background-size: 270px;
   position: absolute;
+  z-index: 12;
+}
+
+#fb1 {
   right: -300px;
   top: 150px;
 }
@@ -20,39 +34,79 @@
 	right: -900px;
 	top: 100px;
 }
+#fb3 {
+  right: -1300px;
+  top: 150px;
+}
+#fb4 {
+	right: -2000px;
+	top: 100px;
+}
+
+#bb {
+	right: -2700px;
+	z-index: 10;
+	width: 1500px;
+	height: 510px;
+	bottom: 190px;
+	position: absolute;
+}
+
+#bb29 {
+	width: 750px;
+	height: 510px;
+	position: absolute;
+	background: url('assets/bb29.png') no-repeat;
+	background-size: 750px;
+	top: 0px;
+	left: 0px;
+	z-index: 10;
+}
+#bb30 {
+	width: 750px;
+	height: 510px;
+	bottom: 190px;
+	position: absolute;
+	background: url('assets/bb30.png') no-repeat;
+	background-size: 750px;
+	top: 0px;
+	left: 800px;
+	z-index: 10;
+}
+
 .banner {
 	width: 750px;
 	height: 80px;
 	top: 30px;
 	position: relative;
 	padding: 15px 0px 0px 25px;
-	border: 1px dashed #ff3af8;
 	left: 251px;
 	color: #fff;
 	background: #48005f;
 	text-align: center;
-	z-index: 10;
 }
-#fb2 .banner{
-	color: #6a0000;
-	background: #ce8300 ;
+.banner {
+	color: #0094bf;
+	background: #080f19 ;
 }
+
+
 #trees
 {
   position : absolute;
-  width:100%; height:350px; bottom:160px; z-index:-9; background: url('assets/trees_small.png');
+  width:100%; height:350px; bottom:140px; z-index:3; background: url('assets/trees_small.png');
   background-size: 2000px;
 }
 #road {
-	position:absolute; width:100%; height:290px; bottom:20px; 
+	position:absolute; width:100%; height:290px; bottom:0px; 
 	background: url('assets/road1.png?3'); 
-	z-index:-10 
+	z-index:0;
 }
 #rick {
-	position:absolute; width:350px; height:260px; bottom:73px; 
+	position:absolute; width:350px; height:260px; bottom:53px; 
 	background: url('assets/rickshaw.png'); 
 	background-size: 350px;
-	z-index:10 
+	z-index:15 
 }
 #aj_head{
 	position: absolute;
@@ -71,7 +125,6 @@
 	left: 80px;
 }
 body {
- background: url('assets/gradient1.png')
 }
 .spacer {
 	text-align: center;
