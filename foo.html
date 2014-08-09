@@ -28,10 +28,15 @@
       var tween_auto = TweenMax.to("#rick", 2, {left: "175px", ease: Linear.easeNone  });
       var tween_auto = TweenMax.to("#rick", 1, {top: "+=5px", repeat:-1, yoyo:true, ease: Linear.easeNone  });
       var tween_fb1 = TweenMax.to("#fb1", 3, {left: "-1300px", top:"-100px", ease: Linear.easeNone});
-      var tween_fb2 = TweenMax.to("#fb2", 3, {left: "-1300px", top:"0px", ease: Linear.easeNone});
+      var tween_fb2 = TweenMax.fromTo("#fb2", 3, {top: "-100px"},{left: "-1300px", top:"100px", ease: Linear.easeNone});
       var tween_fb3 = TweenMax.to("#fb3", 3, {left: "-1300px", top:"0px", ease: Linear.easeNone});
-      var tween_fb4 = TweenMax.to("#fb4", 3, {left: "-1300px", top:"0px", ease: Linear.easeNone});
+      var tween_fb4 = TweenMax.fromTo("#fb4", 3, {top: "-100px"},{left: "-1300px", top:"100px", ease: Linear.easeNone});
       var tween_bb29 = TweenMax.to("#bb", 10, {left: "-1700px", ease: Linear.easeNone});
+      var tween_ms1 = TweenMax.to("#ms1", 3, {left: "-1300px", ease: Linear.easeNone});
+      var tween_ms2 = TweenMax.to("#ms2", 3, {left: "-1300px", ease: Linear.easeNone});
+      var tween_ms3 = TweenMax.to("#ms3", 3, {left: "-1300px", ease: Linear.easeNone});
+      var tween_ms4 = TweenMax.to("#ms4", 3, {left: "-1300px", ease: Linear.easeNone});
+      var tween_ms5 = TweenMax.to("#ms5", 3, {right: "650px", ease: Linear.easeNone});
     // build scene
     var total_height = 14000;
     var scene = new ScrollScene({triggerElement: "#trigger1", triggerHook:"onLeave", duration: total_height})
@@ -60,20 +65,37 @@
     .setTween(tween_fb1)
     .addTo(controller);
 
+    var scene1 = new ScrollScene({triggerElement: "#trigger1", triggerHook:"onLeave", duration: 2400})
+    .setTween(tween_ms1)
+    .addTo(controller);
+
+
     var scene2 = new ScrollScene({triggerElement: "#trigger3", triggerHook:"onLeave", duration: 2400})
     .setTween(tween_fb2)
+    .addTo(controller);
+    var scene2 = new ScrollScene({triggerElement: "#trigger3", triggerHook:"onLeave", duration: 2400})
+    .setTween(tween_ms2)
     .addTo(controller);
 
     var scene2 = new ScrollScene({triggerElement: "#trigger4", triggerHook:"onLeave", duration: 2400})
     .setTween(tween_fb3)
     .addTo(controller);
+    var scene2 = new ScrollScene({triggerElement: "#trigger4", triggerHook:"onLeave", duration: 2400})
+    .setTween(tween_ms3)
+    .addTo(controller);
 
     var scene2 = new ScrollScene({triggerElement: "#trigger5", triggerHook:"onLeave", duration: 2400})
     .setTween(tween_fb4)
     .addTo(controller);
+    var scene2 = new ScrollScene({triggerElement: "#trigger5", triggerHook:"onLeave", duration: 2400})
+    .setTween(tween_ms4)
+    .addTo(controller);
 
     var scene2 = new ScrollScene({triggerElement: "#trigger6", triggerHook:"onLeave", duration: 2400})
     .setTween(tween_bb29)
+    .addTo(controller);
+    var scene2 = new ScrollScene({triggerElement: "#trigger6", triggerHook:"onLeave", duration: 2400})
+    .setTween(tween_ms5)
     .addTo(controller);
 
     scene.addIndicators();
@@ -85,29 +107,53 @@
   </div>
 
   <div id="setting" style="position:relative; width:100%; height:100%; top:0px ">
+    <div id="ms1" class="milestone">
+      <h2>Scene 1</h2>
+      Bangalore
+    </div>
+    <div id="ms2" class="milestone">
+      <h2>Scene 2</h2>
+      &nbsp;&nbsp;&nbsp;Delhi
+    </div>
+    <div id="ms3" class="milestone">
+      <h2>Scene 3</h2>
+      &nbsp;&nbsp;&nbsp;Coorg
+    </div>
+    <div id="ms4" class="milestone">
+      <h2>Scene 4</h2>
+      &nbsp;&nbsp;&nbsp;Bhutan
+    </div>
+    <div id="ms5" class="milestone">
+      <h2>Finale</h2>
+      Hyderabad
+      <p>End of Trailer. Look forward to Meet you at the Wedding.</p> 
+    </div>
+
     <div id="fb1">
       <div class="banner">
-        <h4>An Unexpected Journey</h4>
-        Arbour Brewery ...Burrrp....   Friends. Fun .Chitter. Chatter.....Burrrrp
+        <h4>An Unexpected Journey </h4>
+        Arbour Brewery. Friends. Intros. Fun. Chatter.....Burrrrp
       </div>
     </div>
 
     <div id="fb2">
-      <div class="banner">
-        <h4>Improbability Drive</h4>
-        
+      <div class="banner" style="font-size:0.83em">
+        <h4>Infinite Improbability Drive</h4>
+        Being at the same place at the same time on work in a BIG city. All nights Date nights.
       </div>
     </div>
 
     <div id="fb3">
       <div class="banner">
         <h4>Dance of the Fireflies</h4>
+        A hike with friends. A 100,000 firefiles lit up the sky like stars. Love in the air.
       </div>
     </div>
 
     <div id="fb4">
-      <div class="banner">
-        <h4>Tigers Nest</h4>
+      <div class="banner" style="font-size:0.83em">
+        <h4>Happy Moments at the <a href="http://en.wikipedia.org/wiki/Gross_national_happiness">Happiest Place</a></h4>
+        Exchange of rings and vows at Tigers Nest. <a href="http://en.wikipedia.org/wiki/Paro_Taktsang" target="_blank">Monastry</a> on a Mountain. 
       </div>
     </div>
 
@@ -132,11 +178,11 @@
 
     </div>
   </div>
-  <div id="trigger2" class="spacer" style="min-height:3600px">Scene 1 Act 1</div>
+  <div id="trigger2" class="spacer" style="min-height:2400px">Scene 1 Act 1</div>
   <div id="trigger3" class="spacer" style="min-height:2400px">Scene 1 Act 2</div>
   <div id="trigger4" class="spacer" style="min-height:2400px">Scene 1 Act 3</div>
   <div id="trigger5" class="spacer" style="min-height:2400px">Scene 1 Act 4</div>
-  <div id="trigger6" class="spacer" style="min-height:2000px">Scene 2 Act 1</div>
+  <div id="trigger6" class="spacer" style="min-height:1900px">Scene 2 Act 1</div>
   <div id="trigger_last" class="spacer" style="min-height:1000px">Scene 2 Act 2</div>
 </body>
 </html>

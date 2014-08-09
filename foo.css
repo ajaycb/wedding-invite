@@ -1,7 +1,40 @@
+a, a:visited {
+	text-decoration: underline;
+	color: #aaa;
+}
+a:hover {
+	color: #ccc;
+}
+
 #setting {
 	overflow: hidden;
 	background: url('assets/sky.png') no-repeat;
 }
+.milestone {
+	background: url('assets/milestone.png') no-repeat;
+	bottom: 115px;
+	position: absolute;
+	width: 120px;
+	height: 120px;
+	background-size: 120px;
+	z-index: 10;
+	padding: 20px 20px 30px 30px;
+	font-size: 15px;
+}
+.milestone h2 {
+	margin-bottom: 10px;
+}
+.milestone p {
+	position: absolute;
+	top: 180px;
+	left: -100px;
+	width: 600px;
+	height: 100px;
+	font-size: 25px;
+	color: #eee;
+}
+
+
 #clouds {
   position : absolute;
   width:100%; height:400px; top:0px;
@@ -42,6 +75,23 @@
 	right: -2000px;
 	top: 100px;
 }
+
+#ms1 {
+	right: 200px;
+}
+#ms2 {
+	right: -900px;
+}
+#ms3 {
+	right: -1300px;
+}
+#ms4 {
+	right: -2000px;
+}
+#ms5 {
+	right: -3000px;
+}
+
 
 #bb {
 	right: -2700px;
@@ -84,6 +134,7 @@
 	color: #fff;
 	background: #48005f;
 	text-align: center;
+	font-size: 0.9em;
 }
 .banner {
 	color: #0094bf;
@@ -235,10 +286,6 @@ h2 {
 h4 {
 	font-size: 32px;
 	margin: 0px;
-}
-a, a:visited {
-	text-decoration: none;
-	color: #2e639e;
 }
 a:hover {
 	text-decoration: underline;
